@@ -11,3 +11,10 @@ html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*::before,*::after{-w
 button{
     outline: none;
 }
+
+.radio-stop{
+    margin-right: 4rem;
+}
+.radio-volume{
+    max-width: 100px;
+}
