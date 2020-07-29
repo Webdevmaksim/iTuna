@@ -11,6 +11,13 @@ export const videoPlayerInit = () => {
     const videoProgress = document.querySelector('.video-progress');
     const videoTimeTotal = document.querySelector('.video-time__total');
     const videoTimePassed = document.querySelector('.video-time__passed');
+    // const videoVolume = document.querySelector('.')
+
+    const videoFullscreen = document.querySelector('.video-fullscreen');
+
+    videoFullscreen.addEventListener('click', () => {
+        videoPlayer.requestFullscreen();
+    });
 
     const toggleIcon = () => {
         if (videoPlayer.paused){
