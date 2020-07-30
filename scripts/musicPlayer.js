@@ -2,6 +2,8 @@ import {addZero} from './supScript.js';
 
 export const musicPlayerInit = () => {
 
+    
+
     const audio = document.querySelector('.audio');
     const audioImg = document.querySelector('.audio-img');
     const audioHeader = document.querySelector('.audio-header');
@@ -34,7 +36,7 @@ export const musicPlayerInit = () => {
 
     const prevTrack = () => {
             // audioPlayer.play();
-            if ( trackIndex !==0){
+            if ( trackIndex ){
                 trackIndex--;
             } else{
                 trackIndex = playList.length -1;
@@ -111,4 +113,14 @@ export const musicPlayerInit = () => {
         audioPlayer.currentTime = progress;
 
     });
+
+    // Method for plugIns stop when a tab is switched 
+    musicPlayerInit.stop = () => {
+        if (!audioPlayer.paused) {
+            audioPlayer.pause();
+            audio.classList.remove('play');
+            audioButtonPlay.classList.remove('fa-pause');
+            audioButtonPlay.classList.add('fa-play');
+        }
+    };
 };

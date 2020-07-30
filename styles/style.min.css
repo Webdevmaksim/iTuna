@@ -5,6 +5,10 @@ html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*::before,*::after{-w
     margin: 5px;
 
 }
+.video-fullscreen{
+    margin-right: 15px;
+    margin-left: 15px;
+}
 .video-volume{
     max-width: 90px;
 }
