@@ -1,3 +1,5 @@
+import {addZero} from './supScript.js';
+
 export const videoPlayerInit = () => {
 // video-player
 // video-button__play
@@ -39,9 +41,6 @@ export const videoPlayerInit = () => {
         videoPlayer.pause();
         videoPlayer.currentTime = 0;
     };
-
-    // Add Zero for time duration
-    const addZero = n => n < 10 ? '0'+ n : n;
 
     videoPlayer.addEventListener('click', togglePlay);
     videoButtonPlay.addEventListener('click', togglePlay);
